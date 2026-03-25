@@ -1,0 +1,287 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f28fb1;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  padding: 25px 20px;
+  border-radius: 15px;
+  background: #ffe4f0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+  font-weight: 600;
+  font-size: 28px;
+  color: #6b1e5f;
+}
+
+.subtitle {
+  color: #ff4fa3;
+  margin-bottom: 10px;
+}
+
+#toggle {
+  margin-top: 10px;
+  background: #ff3d7f;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#toggle:hover {
+  background: #ff1a5d;
+}
+
+.add-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  background: #ffe4f0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.add-section input[type=text], 
+.add-section input[type=time] {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ffb3d2;
+  font-size: 16px;
+  flex: 1;
+  color: #6b1e5f;
+}
+
+.add-section button {
+  background: #ff3d7f;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.add-section button:hover {
+  background: #ff1a5d;
+}
+
+.motivation {
+  color: #8b2d65;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.tasks-section {
+  background: #ffe4f0;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.tasks-section h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #6b1e5f;
+}
+
+li {
+  list-style: none;
+  background: #ffffff;
+  margin-bottom: 12px;
+  padding: 14px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  transition: 0.2s;
+  color: #6b1e5f;
+}
+
+li:hover {
+  transform: scale(1.02);
+}
+
+.task-text {
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #b56a81;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #ff1a5d;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+#empty {
+  text-align: center;
+  color: #8b2d65;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.progress-section {
+  background: #ffe4f0;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+#progressbar {
+  width: 100%;
+  height: 20px;
+  background: #ffc0e0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#progressfill {
+  height: 100%;
+  width: 0%;
+  background: #ff3d7f;
+  transition: 0.3s;
+}
+
+#progress {
+  color: #6b1e5f;
+  font-weight: 500;
+}
+
+.tip {
+  font-size: 14px;
+  color: #8b2d65;
+  text-align: center;
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 10px;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .add-section input[type=text],
+  .add-section input[type=time],
+  .add-section button {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  li {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  #progressbar {
+    height: 15px;
+  }
+}
+
+.dark body {
+  background: #2a0a3f;
+}
+
+.dark .header,
+.dark .add-section,
+.dark .tasks-section,
+.dark .progress-section {
+  background: #3d0d5f;
+  color: #f9e0ff;
+}
+
+.dark .header h1 {
+  color: #ffb0ff;
+}
+
+.dark .subtitle {
+  color: #f9c6ff;
+}
+
+.dark input[type=text],
+.dark input[type=time] {
+  background: #5a1a7a;
+  color: #f9e0ff;
+  border: 1px solid #7a3fcf;
+}
+
+.dark li {
+  background: #4b1c80;
+  color: #f9e0ff;
+}
+
+.dark .task-text.completed {
+  color: #b383e0;
+}
+
+.dark .delete-btn {
+  color: #ff70a6;
+}
+
+.dark #toggle {
+  background: #7a3fcf;
+  color: #f9e0ff;
+  border: none;
+}
+
+.dark #toggle:hover {
+  background: #9d55ff;
+}
+
+.dark #progressbar {
+  background: #5a1a7a;
+}
+
+.dark #progressfill {
+  background: #9d55ff;
+}
+
+.dark #progress {
+  color: #f9e0ff;
+  font-weight: 500;
+}
+
+.dark .motivation,
+.dark .tip {
+  color: #d1b2ff;
+}
